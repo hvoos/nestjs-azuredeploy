@@ -55,7 +55,7 @@ jobs:
           app-name: 'test-azuredeploy'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_069C193BFBAE49CFA23E7D635A96C0D2 }}
-          package: nest.js
+          package: node-app
 
       # - name: Delete zip file
       #   run: rm nest.zip
