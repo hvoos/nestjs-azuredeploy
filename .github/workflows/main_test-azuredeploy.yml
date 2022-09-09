@@ -48,6 +48,9 @@ jobs:
         with:
           name: node-app
 
+      - name: unzip artifact for deployment
+        run: unzip nest.zip
+
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
@@ -55,7 +58,7 @@ jobs:
           app-name: 'test-azuredeploy'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_069C193BFBAE49CFA23E7D635A96C0D2 }}
-          package: node-app
+          package: .
 
       # - name: Delete zip file
       #   run: rm nest.zip
