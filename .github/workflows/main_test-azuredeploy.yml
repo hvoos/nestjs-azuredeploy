@@ -58,4 +58,4 @@ jobs:
           package: nest.js
 
       - name: Delete zip file
-            run: rm nest.zip
+          run: rm nest.zip
